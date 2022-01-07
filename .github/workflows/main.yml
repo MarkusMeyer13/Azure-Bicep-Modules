@@ -21,3 +21,12 @@ jobs:
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./ModuleWithTwoFiles/main.bicep
         failOnStdErr: false
+
+      # Deploy Bicep file
+    - name: configure
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ secrets.AZURE_RG }}
+        template: ./ModuleWithTwoFiles/configure.bicep
+        failOnStdErr: false
