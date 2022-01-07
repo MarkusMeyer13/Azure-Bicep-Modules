@@ -1,5 +1,3 @@
-
-
 var location = resourceGroup().location
 var storageAccountAName = uniqueString('A${subscription().id}')
 
